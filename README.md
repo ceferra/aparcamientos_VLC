@@ -1,35 +1,33 @@
-# aparcamientos_VLC — Ocupación de aparcamientos (València)
+# aparcamientos_VLC — Car-park occupancy (València)
 
-Archivo histórico de la **ocupación de los aparcamientos públicos** de
-València (plazas totales y libres), del portal de datos abiertos municipal
-(hoy descatalogado).
+Historical archive of **public car-park occupancy** (total and free spaces)
+for València, from the municipal open-data portal (now decommissioned).
 
-## Origen
+## Source
 
-- **Fuente:** Ayuntamiento de València — portal *mapas.valencia.es*
+- **Publisher:** València City Council — *mapas.valencia.es* portal
   (`lanzadera/opendata/Tra-aparcamientos/CSV`).
-- Servicio descatalogado; este repositorio es la copia de respaldo del
-  histórico.
+- Decommissioned service; this repository is the backup copy of the history.
 
-## Periodo
+## Period
 
-- **1149 días** entre **09-09-2019** y **24-10-2024**.
+- **1149 days** between **2019-09-09** and **2024-10-24**.
 
-## Estructura del repositorio
+## Repository layout
 
-- Un fichero ZIP por día: `DD-MM-YYYY.zip`, con los CSV capturados ese día.
-- Un commit ("new day") por día, fechado con la fecha real del dato.
+- One ZIP file per day: `DD-MM-YYYY.zip`, holding the CSVs captured that day.
+- One commit ("new day") per day, dated with the real date of the data.
 
-## Formato y campos
+## Format and fields
 
-Ficheros **CSV** con separador `;`. Columnas:
+**CSV** files with `;` separator. Columns:
 
-| Columna      | Significado                                              |
-|--------------|---------------------------------------------------------|
-| `X`, `Y`     | Coordenadas del aparcamiento en **UTM EPSG:25830**.     |
-| `nombre`     | Nombre del aparcamiento.                                 |
-| `direccion`  | Dirección postal.                                        |
-| `numeropol`  | Número de policía (portal).                              |
-| `tipo`       | Tipo de aparcamiento.                                    |
-| `plazastota` | Plazas totales.                                          |
-| `plazaslibr` | Plazas libres en el momento de la captura. `-1` = sin dato. |
+| Column       | Meaning                                                  |
+|--------------|----------------------------------------------------------|
+| `X`, `Y`     | Car-park coordinates in **UTM EPSG:25830**.              |
+| `nombre`     | Car-park name.                                            |
+| `direccion`  | Postal address.                                           |
+| `numeropol`  | Street number (door number).                              |
+| `tipo`       | Car-park type.                                            |
+| `plazastota` | Total spaces.                                             |
+| `plazaslibr` | Free spaces at capture time. `-1` = no data.             |
